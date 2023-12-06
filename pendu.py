@@ -63,7 +63,7 @@ def pendu():
   n = len(mot)
   time.sleep(0.1) #user need to up his finger to keyboard
   space(n)
-  e = [0] * (n)
+  e = ([0] * (n)) - 1
   while True:
     d = touche(1)
     p = False
