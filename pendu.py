@@ -60,10 +60,13 @@ def pendu():
     for l in fl:
       mots.append(l.rstrip("\n"))
   mot = random.choice(mots)
+  motatrouver=[]
+  for i in range (len(mot)):
+    motatrouver.append(mot[i])
   n = len(mot)
   time.sleep(0.1) #user need to up his finger to keyboard
   space(n)
-  e = ([0] * (n)) - 1
+  e=[0]*(n)
   while True:
     d = touche(1)
     p = False
@@ -79,7 +82,7 @@ def pendu():
     for l in range(len(e)):
       if e[l] != 0:
         affichage(e[l], l, n)
-    if e == mot:
+    if e == motatrouver:
       window.blit(pygame.image.load("win.png").convert(), (0, 0))
       pygame.display.flip()
       menu()
